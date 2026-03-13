@@ -1,6 +1,6 @@
 # FarmMaster
 
-![FarmMaster Logo](https://via.placeholder.com/400x200/228B22/ffffff?text=FarmMaster) <!-- Placeholder; replace with your logo -->
+![FarmMaster Demo](https://via.placeholder.com/800x400/228B22/ffffff?text=FarmMaster+AI+App+Running+at+localhost:5000) <!-- Replace with actual screenshot -->
 
 ## Introduction
 
@@ -69,9 +69,12 @@ Used public Kaggle datasets for training (crop/fertilizer rec, plant disease ima
 
 MIT License – see LICENSE.
 
+## Demo
+Live demo: http://127.0.0.1:5000 (local) | [GitHub Repo](https://github.com/Ravikiranreddybada/FarmMaster)
+
 ## Contact
 
 Ravikiran Reddy Bada  
 GitHub: https://github.com/ravikiranreddybada  
-Repo: https://github.com/ravikiranreddybada/FarmMaster  
+Repo: https://github.com/Ravikiranreddybada/FarmMaster  
 Email: ravikiranreddybada@gmail.com
