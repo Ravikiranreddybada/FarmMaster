@@ -1,0 +1,11 @@
+Flask==2.0.3
+tensorflow
+scikit-learn
+numpy==1.22.3
+Pillow==9.0.1
+joblib==1.1.0
+Werkzeug==2.0.3
+Jinja2==3.1.0
+itsdangerous==2.1.1
+click==8.0.4
+MarkupSafe==2.1.1

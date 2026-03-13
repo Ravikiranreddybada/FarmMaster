@@ -1,0 +1,86 @@
+{% extends "index.html" %}
+{% block content %}
+
+<div class="container pt-5">
+  <h1 class="text-center" style="color: #8CE17D;">Plant Recommendation</h1>
+  <p class="text-center pt-3">Enter soil nutrient levels and weather data to get the best plant suggestion for your land.</p>
+</div>
+<br>
+<br>
+<div class="container">
+
+
+  <div class="col-md-4 col-md-offset-4" style="float: right; margin-top: 5%; margin-right: 10%;margin-bottom: 5%;">
+    <img src="./static/images/upload-img.jpg" width="500" height="333">
+  </div>
+
+  <form action="/crop-recommendation" method="POST" style="margin-top: 5%">
+    <div class="col-md-4 col-md-offset-4">
+
+      <label for="N">Nitrogen (N) Level:</label>
+      <input class="form-control" type="number" min="0" required="required" name="N" 
+        placeholder="Enter nitrogen amount">
+
+    </div>
+    <div class="col-md-4 col-md-offset-4">
+
+      <label for="P">Phosphorus (P) Level:</label>
+      <input class="form-control" type="number" min="0" id="P" name="P" required="required"
+        placeholder="Enter phosphorus amount">
+
+    </div>
+    <div class="col-md-4 col-md-offset-4">
+
+      <label for="K">Potassium (K) Level:</label>
+      <input class="form-control" type="number" min="0" id="K" name="K" required="required"
+        placeholder="Enter potassium amount">
+
+    </div>
+    <div class="col-md-4 col-md-offset-4">
+
+      <label for="temperature">Temperature:</label>
+      <input class="form-control" type="number" min="0" step="any" id="temperature" name="temperature"
+        required="required" placeholder="Enter temperature in C">
+
+    </div>
+    <div class="col-md-4 col-md-offset-4">
+
+      <label for="humidity">Humidity:</label>
+      <input class="form-control" type="number" min="0" step="any" id="humidity" name="humidity" required="required"
+        placeholder="Enter humidity %">
+
+    </div>
+    <div class="col-md-4 col-md-offset-4">
+
+      <label for="ph">Soil pH:</label>
+      <input class="form-control" type="number" min="0" step="any" id="ph" name="ph" required="required"
+        placeholder="Enter soil pH">
+
+    </div>
+    <div class="col-md-4 col-md-offset-4">
+
+      <label for="rainfall">Rainfall:</label>
+      <input class="form-control" type="number" min="0" step="any" id="rainfall" name="rainfall" required="required"
+        placeholder="Enter rainfall mm">
+
+    </div>
+    <br>
+
+
+    <div class="text-center" style="padding-top: 5%">
+      <button type="submit" class="btn btn-success" value="submit">Get Recommendation</button>
+    </div>
+    <br>
+    <br>
+
+  </form>
+
+
+
+</div>
+
+
+<br>
+<br>
+
+{% endblock %}

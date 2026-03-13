@@ -1,0 +1,64 @@
+{% extends "index.html" %}
+{% block content %}
+<div class="container pt-5">
+  <h1 class="text-center" style="color: #8CE17D;">Plant Disease Detection</h1>
+  <p class="text-center pt-3">Upload a plant leaf image and select type for instant AI disease analysis.</p>
+</div>
+<form action="/crop-disease" method="POST" enctype="multipart/form-data"
+  style="margin-top: 30px; width: 80%; text-align: center; margin: auto">
+  <br>
+  <br>
+  <br>
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <label>Select plant type:</label>
+      <div class="col-md-4">
+
+        <select name="crop" class="form-control" required="required">
+          {% for plant in plants %}
+          <option value="{{plant}}">{{plant.title()}}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+    <br />
+    <div class="row d-flex justify-content-center">
+      <label>Upload leaf image:</label>
+      <div class="col-md-4 pt-2">
+
+        <input class="form-control" name="file" type="file" id="formFile" onchange="preview_image(event)"
+          accept="image/*" required="required">
+
+      </div>
+
+    </div>
+    <img id="output-image" class="rounded mx-auto d-block" src="./static/images/upload.jpg"
+      style="max-width: 500px; max-height: 450px; margin-top: 30px; margin-bottom: 2px" />
+    <p style="font-style: italic">Preview will appear here</p>
+    <br>
+    <div class="row" style="text-align:center;">
+      <div class="col-md-12">
+        <button type="submit" class="btn btn-success">Analyze Image</button>
+      </div>
+    </div>
+
+  </div>
+
+</form>
+<br>
+<br>
+<br>
+
+<script type="text/javascript">
+  function preview_image(event) {
+    var reader = new FileReader();
+    reader.onload = function () {
+      var output = document.getElementById('output-image');
+      output.src = reader.result;
+    }
+    reader.readAsDataURL(event.target.files[0]);
+  }
+</script>
+<hr>
+
+{% endblock %}
