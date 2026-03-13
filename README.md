@@ -1,6 +1,6 @@
 # FarmMaster
 
-![FarmMaster Demo](https://via.placeholder.com/800x400/228B22/ffffff?text=FarmMaster+AI+App+Running+at+localhost:5000) <!-- Replace with actual screenshot -->
+
 
 ## Introduction
 
